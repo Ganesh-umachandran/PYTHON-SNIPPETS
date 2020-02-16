@@ -1,0 +1,14 @@
+N,innings_list,first_innings_average,second_innings_average=int(input()),[],0,0
+for ctr1 in range(N):
+    innings_list.append(list(map(int,input().split())))
+for ctr1 in range(N):
+    for ctr2 in range(2):
+        if ctr2==0:
+            first_innings_average+=innings_list[ctr1][ctr2]
+        else:
+            second_innings_average+=innings_list[ctr1][ctr2]
+first_innings_average/=N
+second_innings_average/=N
+print('%.2f'%first_innings_average)
+print('%.2f'%second_innings_average)
+            
