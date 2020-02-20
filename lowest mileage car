@@ -1,0 +1,13 @@
+INPUT:santo@15.8 tesla@250 fiat@10.2
+OUTPUT:fiat
+
+
+code:
+
+a=[str(i) for i in input().split()]
+l,l1=[],[]
+for i in a:
+    b,c=map(str,i.split('@'))
+    l.append(b)
+    l1.append(float(c))
+print(l[l1.index(min(l1))])
