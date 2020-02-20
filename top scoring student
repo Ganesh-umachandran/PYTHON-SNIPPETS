@@ -1,0 +1,19 @@
+INPUT:
+	4
+	alex:80:80:85
+	mayson:90:95:93
+	johnwick:100:99:100
+	bruce:100:98:98
+OUTPUT:
+	johnwick
+
+CODE:
+	a=int(input())
+l1,l2,name,m1,m2,m3=[],[],0,0,0,0
+for i in range(a):
+    name,m1,m2,m3=map(str,input().split(':'))
+    m1=int(m1)+int(m2)+int(m3)
+    l1.append(name)
+    l2.append(int(m1))
+print(l1[l2.index(max(l2))])
+   
