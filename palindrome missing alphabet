@@ -1,0 +1,17 @@
+input :malayaam
+output :l
+code:
+	
+sr=input().strip()
+k,i=len(sr)-1,0
+while(i<k):
+    if sr[i]!=sr[k]:
+        if sr[i]==sr[k-1] and i!=k-1:
+            print(sr[k])
+            break
+        else:
+            print(sr[i])
+            break
+    k-=1
+    i+=1
+    
