@@ -1,0 +1,6 @@
+input: 5418
+output: 972
+
+code:
+  a=input()
+  print(int(a[:len(a)//2])*int(a[len(a)//2:]))
