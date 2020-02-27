@@ -1,0 +1,10 @@
+s=list(input().strip())
+s,c=s[::-1],0
+for i in range(len(s)):
+    for j in range(i+1,len(s)):
+        if s[i]==s[j]:
+            print(s[i])
+            c=1
+            break
+    if c==1:
+        break
