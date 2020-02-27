@@ -1,0 +1,5 @@
+
+#Your code below
+a=int(input())
+b=int(bin(a)[2:])
+print(bin(b)[2:])
