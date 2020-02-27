@@ -1,0 +1,26 @@
+input=3
+output:
+1 2 3 + 3 2 1
+1 2 3 + 3 2 1
+1 2 3 + 3 2 1
++ + + + + + +
+1 2 3 + 3 2 1
+1 2 3 + 3 2 1
+1 2 3 + 3 2 1
+
+code:
+
+a=int(input())
+
+for i in range(a*2+1):
+    b,c=1,a
+    for j in range(a*2+1):
+        if j==a or i==a:
+            print("+",end=" ")
+        elif j<a:
+            print(b,end=" ")
+            b+=1
+        else:
+            print(c,end=" ")
+            c-=1
+    print()
