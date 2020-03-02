@@ -1,0 +1,17 @@
+#Your code below
+a=int(input())
+b,l1="123456789",[]
+l=[str(i) for i in input().split()]
+for i in range(9):
+    e=''
+    for j in l:
+        c=j
+        for k in c:
+            if b[i]==k:
+                e="".join([e,k])
+    l1.append(e)
+s=0
+for i in l1:
+    if i!='':
+        s+=int(i)
+print(s)
