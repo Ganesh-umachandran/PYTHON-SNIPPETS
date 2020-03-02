@@ -1,0 +1,14 @@
+
+a=int(input())
+l,c,l1=[],0,[]
+for i in range(a):
+    b=[int(i) for i in input().split()]
+    l1.append(sum(b))
+    l.append(b)
+for i in range(a):
+    s=0
+    for j in range(a):
+        s+=l[j][i]
+    if s==l1[i]:
+        c+=1
+print(c)
