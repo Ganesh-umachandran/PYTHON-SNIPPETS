@@ -1,0 +1,43 @@
+the program must accept  n integers .for every 2 integers x and y the prg must remove the lats digit of x and first digit of y 
+and form an integer t by concatenating those digits.the the prg must insert the integer t between x and y .finally the prg must 
+print sum of 2n-1 integers.
+
+example :
+input: 
+5
+340 651 2000 3004 853
+
+output:
+34 + 6 + 5 + 12 + 0 + 3 + 0 + 48 + 53 = 161
+
+explantion
+at first x=340 and y=651 then t= 0+6=6(string concat)
+then digts are removed from their respective integers
+s0 x=34 and y=51
+after concat and removing the whole list becomes
+34,6,5,12,0,3,0,48,53
+
+code:
+#Your code below
+a=int(input())
+l=[str(i) for i in input().split()]
+l1=[]
+for i in range(a):
+    if i==a-1:
+        c=l[i]
+        l1.append(int(c[1:]))
+    if i+1<=a-1:
+        c,d=l[i],l[i+1]
+        e=c[len(c)-1]+d[0]
+        if i==0:
+            l1.append(int(c[:-1]))
+        else:
+            l1.append(int(c[1:-1]))
+        l1.append(int(e))
+for i in range(len(l1)):
+    if i==len(l1)-1:
+        print(l1[i],end=" = ")
+        print(sum(l1))
+    else:
+        print(l1[i],end=" + ")
+        
