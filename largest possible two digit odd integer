@@ -1,0 +1,22 @@
+the program must accept 2 integers x and y.the program must choose exactly one digit froma both the integers and 
+it must form the largest possible 2 digit odd integer .if not it should print 1
+
+INPUT:
+  1687 3457
+OUTPUT:
+  87
+
+code:
+  
+a,b=map(str,input().split())
+l=[]
+for i in range(len(a)):
+    for j in range(len(b)):
+        if int(b[j])%2!=0:
+            l.append(int("".join([a[i],b[j]])))
+        if int(a[i])%2!=0:
+            l.append(int("".join([b[j],a[i]])))
+if len(l)==0:
+    print("-1")
+else:
+    print(max(l))
