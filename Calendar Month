@@ -1,0 +1,5 @@
+l=["January","Feruary","March","April","May","June","July","August","September","October","November","December"]
+a=input()
+b=a.index("-")
+print(l[int(a[b+1:b+3])-1])
+    
