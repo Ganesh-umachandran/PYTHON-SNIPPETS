@@ -1,0 +1,16 @@
+
+a,l,c,l1,l2=int(input()),[],0,[],[]
+b=a//2+1 if a%2!=0 else a//2
+for i in range(a):
+    l.append(list(map(int,input().split())))
+for k in range(b):
+    s=0
+    for i in range(a):
+        for j in range(a):
+            if ((i==c or i==a-1-c) and j>=c and j<=a-1-c)or((j==c or j==a-1-c)and i>=c and i<=a-1-c):
+                s+=l[i][j]
+    c+=1
+    l1.append(s) if s<=0 else l2.append(s)
+print(max(l2)) if sum(l2)>0 else print(max(l1)) 
+
+                
