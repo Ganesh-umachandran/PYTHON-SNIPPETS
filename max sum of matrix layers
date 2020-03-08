@@ -1,4 +1,17 @@
-
+explanation:
+input:
+   4
+   1 1 1 1
+   1 2 2 1
+   1 2 2 1 
+   1 1 1 1 
+ ouput:
+    12
+ explanation:
+ sum of outer  layers:(1+1+1+1+1+1+1+1+1+1+1+1)=12
+ sum of inner layers:(2+2+2+2)=8
+   so max of(8,12) is 12
+  
 a,l,c,l1,l2=int(input()),[],0,[],[]
 b=a//2+1 if a%2!=0 else a//2
 for i in range(a):
