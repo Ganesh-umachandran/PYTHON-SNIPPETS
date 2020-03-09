@@ -1,0 +1,10 @@
+#Your code below
+a=int(input())
+l,s=[],0
+for i in range(a):
+    l.append(list(map(int,input().split())))
+for i in range(a):
+    for j in range(a):
+        if (i==0 and j==0) or (i==0 and j==a-1) or (i==a-1 and j==a-1) or (i==a-1 and j==0):
+            s+=l[i][j]
+print(s)
