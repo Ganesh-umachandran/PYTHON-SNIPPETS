@@ -1,0 +1,33 @@
+explanation:
+  if a=456 and b=546
+  first all 5 is changed to 6 and
+  all the 6 are changed to 5 so there are four outputs
+  ( 455, 545) (466,646)
+  so min=1000 and max=1112
+  (sum of those 2)
+  
+  code:
+a,b=map(str,input().split())
+c,c1,d,d1="","","",""
+for i in a:
+    if i=="5":
+        c+="6"
+    else:
+        c+=i
+    if i=="6":
+        c1+="5"
+    else:
+        c1+=i
+for i in b:
+    if i=="5":
+        d+="6"
+    else:
+        d+=i
+    if i=="6":
+        d1+="5"
+    else:
+        d1+=i
+a=min(int(c1)+int(d1),int(c)+int(d))
+b=max(int (c1)+int(d1),int(c)+int(d))
+print(a)
+print(b)
