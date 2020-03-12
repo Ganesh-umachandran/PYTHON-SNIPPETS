@@ -1,0 +1,15 @@
+input:
+  2e3d1f
+output:
+  eedddf
+
+code:
+
+a=input().strip()
+b=""
+for i in a:
+    if i.isdigit():
+        b="".join([b,i])
+    else:
+        print(int(b)*i,end="")
+        b=""
