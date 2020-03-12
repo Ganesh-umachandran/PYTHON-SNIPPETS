@@ -1,0 +1,22 @@
+input:
+  abc_der
+ output:
+ cba_der
+ 
+ input:
+  asdddad
+ output:
+  asdddad
+  
+ code:
+a,b=input(),""
+if "_" not in a:
+    print(a[::-1])
+else:
+    for i in a:
+        if i!="_":
+            b="".join([b,i])
+        else:
+            break
+    print(b[::-1]+a[a.index("_"):])
+        
