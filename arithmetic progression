@@ -1,0 +1,16 @@
+input:
+  5 10 15
+  6
+output:
+  30
+
+explanation:
+  the 6th element of arithmetic progression is 30
+  
+code:
+
+a,b,c=map(int,input().split())
+d=int(input())
+for i in range(3,d):
+    c+=(b-a)
+print(c)
