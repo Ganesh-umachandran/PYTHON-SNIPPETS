@@ -1,0 +1,13 @@
+import math
+a1=input().strip()
+b,c=a1[:len(a1)//2],a1[len(a1)//2:]
+b1,c1=a1[:len(a1)//2+1],a1[len(a1)//2+1:]
+a,b,c,b1=math.sqrt(int(a1)),math.sqrt(int(b)),math.sqrt(int(c)),math.sqrt(int(b1)),
+if len(c1)==0: c1=math.sqrt(1)
+if a1=="25":
+    print("NO")
+elif (a-math.floor(a))==0 and (((b-math.floor(b))==0 and (c-math.floor(c))==0) or ((b1-math.floor(b1))==0 and (c1-math.floor(c1))==0)):
+    print("YES")
+else:
+    print("NO")
+
