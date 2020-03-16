@@ -1,0 +1,5 @@
+#Your code below
+a=input().strip()
+b=int(input())
+a=list(a[::-1]*b)
+print("".join(a[:b]))
