@@ -1,0 +1,21 @@
+
+a=input().strip()
+b=int(input())
+l,l1=[],[]
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if a[i]==a[j]:
+            l.append(a[i])
+            l1.append(j)
+            break
+l1.sort()
+l=[]
+for i in range(b):
+    l.append(a[l1[i]])
+l.sort()
+
+for i in range(len(a)):
+    if a[i] in l :
+        print(a[i],end="")
+
+    
