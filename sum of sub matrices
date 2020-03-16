@@ -1,0 +1,18 @@
+
+#Your code below
+a,b=map(int,input().split())
+l=[]
+for i in range(a):
+    l.append(list(map(int,input().split())))
+a1,b1,a2,b2=map(int,input().split())
+s=0
+if b2>=b or a2>=a :
+    print("-1")
+else:
+    for i in range(a1,a2+1):
+        for j in range(b1,b2+1):
+                print(l[i][j],end=" ")
+                s+=l[i][j]
+        print()
+    print(s)
+            
