@@ -1,0 +1,14 @@
+#Your code below
+a=int(input())
+l=[]
+for i in range(a):
+    l.append(list(map(int,input().split())))
+b=int(input())
+s,s1=0
+for i in range(a):
+    for j in range(a):
+        if i==b-1 :
+            s+=l[i][j]
+        if j==b-1:
+            s1+=l[i][j]
+print(s,s1)
