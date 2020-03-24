@@ -1,0 +1,15 @@
+a=int(input())
+l=[int(i) for i in input().split()]
+c,c1=0,0
+for i in range(a):
+    if i+1<a and l[i]<l[i+1] :
+        c+=1
+    elif i+1<a and l[i]>l[i+1]:
+        c1+=1
+if c==a-1 or c1==a-1:
+    print("yes")
+else:
+    print("no")
+    
+    
+    
