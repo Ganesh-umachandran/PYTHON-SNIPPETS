@@ -1,0 +1,7 @@
+#Your code below
+a=input().strip()
+l,s="6255456376",0
+for i in range(len(a)):
+    s+=int(l[int (a[i])])
+print(s)
+    
