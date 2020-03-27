@@ -1,0 +1,4 @@
+import math
+a,b=map(int,input().split())
+c,d=map(int,input().split())
+print("%.2f"%math.sqrt(((c-a)**2)+((d-b)**2)))
