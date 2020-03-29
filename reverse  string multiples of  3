@@ -1,0 +1,11 @@
+input:
+abcdefg
+ouput:
+eb
+
+#Your code below
+a=input().strip()
+a=a[::-1]
+for i in range(0,len(a)):
+    if (i+1)%3==0:
+        print(a[i],end="")
