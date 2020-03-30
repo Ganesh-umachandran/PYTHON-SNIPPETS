@@ -1,0 +1,22 @@
+input:
+abcdefghj
+kmnpqrst
+
+ouput:
+ouvwxyz
+
+explanation:
+gets 2 strings and the output is missing alphabets in the strings in alphabets order
+
+#Your code below
+a=input().strip()
+b=input().strip()
+a=list(a+b)
+a.sort()
+b,c="abcdefghijklmnopqrstuvwxyz",0
+for i in b:
+    if i not in a:
+        print(i,end="")
+        c=1
+if c==0:
+    print("-1")
