@@ -1,0 +1,7 @@
+#Your code below
+a=input().strip()
+a,b,i=a[::-1],2,0
+while(i<len(a)):
+    print(a[i],end="")
+    i+=b
+    b+=1
