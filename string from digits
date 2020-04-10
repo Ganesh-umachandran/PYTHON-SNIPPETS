@@ -1,0 +1,10 @@
+input:
+1345
+ a b c d e f g h
+output:
+bdef
+code:
+a=input().strip()
+l=[str(i) for i in input().split()]
+for i in a:
+    print(l[int(i)],end="")
