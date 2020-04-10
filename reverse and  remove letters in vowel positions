@@ -1,0 +1,12 @@
+input:
+pond
+output:
+dop
+
+code:
+a=input().strip()
+b=a[::-1]
+for i in range(len(a)):
+    if a[i] not in "aeiou":
+        print(b[i],end="")
+        
