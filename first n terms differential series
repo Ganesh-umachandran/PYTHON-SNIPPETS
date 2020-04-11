@@ -1,0 +1,12 @@
+input:
+5
+output:
+2 5 10 17 26
+
+code:
+a=int(input())
+for i in range(1,a+1):
+    print(i*i+1,end=" ")
+    
+    
+    
