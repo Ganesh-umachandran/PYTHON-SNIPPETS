@@ -1,0 +1,18 @@
+input:
+malayalam
+a
+l
+output:
+2
+
+explantion:
+printed the count of times where a is folowed by l 
+
+code:
+a=input().strip()
+b=input().strip()
+c,d=input().strip(),0
+for i in range(len(a)):
+    if i+1<len(a) and a[i]==b and a[i+1]==c:
+        d+=1
+print(d)
