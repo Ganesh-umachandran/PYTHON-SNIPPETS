@@ -1,0 +1,11 @@
+input:
+5
+4 3 5 2 1
+output:
+3 5 4 2 1
+
+code:
+a=int(input())
+l=[int(i) for i in input().split()]
+for i in l:
+    print(l[a-i],end=" ")
