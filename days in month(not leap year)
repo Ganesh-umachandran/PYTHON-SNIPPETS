@@ -1,0 +1,12 @@
+input:
+6
+output:
+30
+
+code:
+a=int(input())
+if a<=7 and a!=2 and a%2!=0:print("31")
+elif a>=8 and a<=12 and a%2==0:print("31")
+elif a==2 :print("28")
+elif a<=0 or a>12:print("Invalid")
+else:print("30")
