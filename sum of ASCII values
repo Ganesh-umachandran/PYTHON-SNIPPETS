@@ -1,0 +1,12 @@
+input:
+abcd
+
+output:
+394
+
+code;
+
+a,s=input().strip(),0
+for i in a:
+    s+=ord(i)
+print(s)
