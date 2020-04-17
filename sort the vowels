@@ -1,0 +1,19 @@
+input:
+obawieda
+
+ouput:
+abaweido
+
+code:
+a,b,l=input().strip(),"AEIOUaeiou",[]
+for i in a:
+    if i in b:
+        l.append(i)
+l.sort()
+j=0
+for i in range(len(a)):
+    if a[i] in b:
+        print(l[j],end="")
+        j+=1
+    else:
+        print(a[i],end="")
