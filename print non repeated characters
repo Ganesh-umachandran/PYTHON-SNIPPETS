@@ -1,0 +1,11 @@
+input:
+aeroplane
+
+ouput:
+ropln
+
+code:
+a=input().strip()
+for i in a:
+    if a.count(i)==1:
+        print(i,end="")
