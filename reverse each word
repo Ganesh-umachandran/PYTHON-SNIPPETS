@@ -1,0 +1,9 @@
+input:
+human being
+ouput:
+namuh gnieb
+
+code:
+a=[str(i) for i in input().split()]
+for i in a:
+    print(i[::-1],end=" ")
