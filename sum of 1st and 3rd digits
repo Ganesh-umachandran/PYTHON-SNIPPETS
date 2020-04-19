@@ -1,0 +1,16 @@
+input:
+978174
+
+output:
+yes
+
+explanation:
+if sum of 1st and 3rd elements in the input number the yes else no
+9+8=17 and  17 is present in input number
+
+code:
+a=input().strip()
+if str(int(a[0])+int(a[2])) in a:
+    print("yes")
+else:
+    print("no")
