@@ -1,0 +1,13 @@
+input:
+5
+car dog elephant boy air
+
+output:
+air
+elephant
+
+code:
+a=int(input())
+l=[str(i) for i in input().split()]
+l.sort()
+print(l[0],"\n",l[-1])
