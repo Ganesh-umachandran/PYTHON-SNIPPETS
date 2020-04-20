@@ -1,0 +1,16 @@
+input:
+102001
+
+output:
+yes
+
+explantion:
+the integer is moade up of onlt 1,2,0
+so yes else no
+
+code:
+l=[]
+for i in input().strip():
+    if i not in l:
+        l.append(i)
+print("yes" if len(l)==3 else "no")
