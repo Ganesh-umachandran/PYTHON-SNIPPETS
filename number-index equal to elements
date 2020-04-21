@@ -1,0 +1,18 @@
+input:
+5
+6 1 2 4 4 3
+
+output:
+1 2 4
+
+explanation:
+1,2,4 are elements that are equal to their indexes
+
+code:
+a,l,c=int(input()),[int(i) for i in input().split()],0
+for i in range(a):
+    if i==l[i]:
+        print(i,end=" ")
+        c=1
+if c==0:
+    print("-1")
