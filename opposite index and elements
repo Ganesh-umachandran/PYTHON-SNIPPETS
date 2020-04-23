@@ -1,0 +1,21 @@
+input:
+5
+10 22 42 11 3
+
+output:
+10 42 11
+
+explanation:
+if even positions contains odd integers or vice versa  then display the element
+
+code:
+a,l,c=int(input()),[int(i) for i in input().split()],0
+for i in range(a):
+    if (i+1)%2!=0 and l[i]%2==0:
+        print(l[i],end=" ")
+        c=1
+    if (i+1)%2==0 and l[i]%2!=0:
+        print(l[i],end=" ")
+        c=1
+if c==0:print("-1")
+    
