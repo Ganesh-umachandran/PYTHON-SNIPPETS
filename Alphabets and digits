@@ -1,0 +1,12 @@
+input:
+Pass123Lock456
+
+output:
+passLock123456
+
+code:
+a=input().strip()
+for i in a:
+    if i.isalpha():print(i,end="")
+for i in a:
+    if i.isdigit():print(i,end="")
