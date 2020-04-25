@@ -1,0 +1,15 @@
+input:
+123
+
+output:
+100 200 300
+10 20 30
+1 2 3
+
+code:
+a=input().strip()
+b=len(a)-1
+for i in range(len(a)):
+    for j in range(len(a)):
+        print(int(a[j]+"0"*(b-i)),end=" ")
+    print()
