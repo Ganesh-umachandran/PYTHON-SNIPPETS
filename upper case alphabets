@@ -1,0 +1,21 @@
+input:
+MNVCXZLKJH
+GFDSAPOIUYTREWQ
+
+output:
+yes
+
+explanation:
+if all the upper case letters in 2 strings repeated once and it is from A-Z
+so yes else no
+
+code:
+a="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+b=input().strip()
+c=input().strip()
+b=b+c
+c=0
+for i in b:
+    if i in a and b.count(i)==1 :c+=1
+if c==len(a):print("yes")
+else:print("no")
