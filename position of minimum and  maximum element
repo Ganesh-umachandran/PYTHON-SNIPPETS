@@ -1,0 +1,11 @@
+input:
+4
+42 2 1 7
+
+output:
+3 1
+
+code:
+a=int(input())
+l=[int(i) for i in input().split()]
+print(l.index(min(l))+1,l.index(max(l))+1)
