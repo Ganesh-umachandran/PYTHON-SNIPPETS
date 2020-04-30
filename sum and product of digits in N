@@ -1,0 +1,19 @@
+input:
+59
+
+ouput:
+yes
+
+explanation:
+sum of digits=14
+product of digits=45
+14+45=59 so yes else no
+
+code:
+a=input().strip()
+b,c=[],1
+for i in a:
+    b.append(int(i))
+    c*=int(i)
+if (sum(b)+c)==int(a):print("yes")
+else:print("no")
