@@ -1,0 +1,14 @@
+input:
+TN-49 A 5678
+
+ouput:
+39
+explanation:
+the sum of all the numbers in registrstion number
+
+code:
+#Your code below
+a,b=input().strip(),0
+for i in a:
+    if i.isdigit():b+=int(i)
+print(b)
