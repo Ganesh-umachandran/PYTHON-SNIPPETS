@@ -1,0 +1,18 @@
+input:
+5
+4 6 11 5 6
+6
+
+output:
+4 6 11 5
+
+code:
+a=int(input())
+l=list(map(int,input().split()))
+b,c=int(input()),1
+if b in l:
+    l=l[::-1]
+    l.remove(b)
+    l=l[::-1]
+for i in l:
+    print(i,end=" ")
