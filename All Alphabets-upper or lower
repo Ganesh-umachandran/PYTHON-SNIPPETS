@@ -1,0 +1,15 @@
+input:
+AbcDeFGHijklLLGGFD
+MNOPqRstuUUVvvWxYZZzzz
+
+output:
+yes
+
+code:
+a=input().strip()
+b,c,d=input().strip(),0,"abcdefghijklmnopqrstuvwxyz"
+a+=b
+for i in d:
+    if i in a or i.upper() in a:c+=1
+if c==26:print("yes")
+else:print("no")
