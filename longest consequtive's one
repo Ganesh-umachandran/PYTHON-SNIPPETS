@@ -1,0 +1,15 @@
+input:
+1011011100011
+
+output:
+3
+
+code:
+a,l,d=input().strip(),[],0
+for i in range(len(a)):
+    if a[i]=="1":d+=1
+    else:
+        l.append(d)
+        d=0
+l.append(d)
+print(max(l) if max(l)>1 else "-1")
