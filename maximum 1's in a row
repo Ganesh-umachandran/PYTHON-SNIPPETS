@@ -1,0 +1,17 @@
+input:
+4 5
+1 0 1 0 1
+1 0 0 0 0
+0 0 1 0 1
+1 1 1 1 0
+
+output:
+4
+
+code:
+a,b=map(int,input().split())
+m=0
+for i in range(a):
+    c=list(map(int,input().split()))
+    if c.count(1)>m:m=c.count(1)
+print(m)
