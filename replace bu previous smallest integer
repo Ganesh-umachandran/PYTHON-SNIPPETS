@@ -1,0 +1,19 @@
+input:
+5
+10 13 5 6 7
+
+ouput:
+10 10 5 5 5
+
+code:
+a=int(input())
+l,b=list(map(int,input().split())),[]
+print(l[0],end=" ")
+b.append(l[0])
+for i in range(1,a):
+    if min(b)<l[i]:
+        print(min(b),end=" ")
+        b.append(min(b))
+    else:
+        print(l[i],end=" ")
+        b.append(l[i])
