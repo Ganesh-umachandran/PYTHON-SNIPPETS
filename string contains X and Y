@@ -1,0 +1,11 @@
+input:
+xyxyXXXYY
+output:
+yes
+
+code:
+string,sample,count=input().strip(),"xy",0
+for i in string:
+    if i.lower() in sample:count+=1
+if c==len(string):print("yes")
+else:print("no")
