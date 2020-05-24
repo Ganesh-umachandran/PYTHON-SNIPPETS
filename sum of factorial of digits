@@ -1,0 +1,11 @@
+input:
+123
+output:
+9
+
+code:
+import math
+string,count=input().strip(),0
+for i in string:
+    count+=math.factorial(int(i))
+print(count)
