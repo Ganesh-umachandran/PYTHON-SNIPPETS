@@ -1,0 +1,15 @@
+input:
+102425 4
+
+output:
+yes
+
+code:
+N,D=map(str,input().split())
+count,l=0,[]
+for i in N:
+    if int(i)<=int(D) and i not in l:
+        count+=1
+        l.append(i)
+if count==int(D)+1:print("yes")
+else:print("no")
