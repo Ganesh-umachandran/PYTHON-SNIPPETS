@@ -1,0 +1,15 @@
+N,M=int(input()),[]
+for i in range(N):
+    M.append(list(map(int,input().split())))
+K,flag=int(input()),0
+for i in range(0,N,K):
+    for j in range(0,N,K):
+        for k in range(i,i+K):
+            for l in range(j,j+K):
+                if M[i][j]!=M[k][l]:
+                    flag=1
+                    break
+if flag==1:print("no")
+else:print("yes")
+                
+        
