@@ -1,0 +1,11 @@
+input:
+122112
+
+ouput:
+yes
+
+code:
+N,sample=input().strip(),""
+for i in N:
+    if i not in sample:sample+=i
+print("YES" if len(sample)==2 else "NO")
