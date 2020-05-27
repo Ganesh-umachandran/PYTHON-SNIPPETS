@@ -1,0 +1,13 @@
+input:
+13 5
+output:
+5
+code:
+M,N=map(int,input().split())
+binary,count=bin(M+N)[2:],0
+for i in range(len(binary)):
+    if binary[i]=="1":count+=1
+    if count==2:
+        print(i+1)
+        break
+if count!=2:print(0)
