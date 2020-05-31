@@ -1,0 +1,11 @@
+input:
+google
+lego
+
+output:
+yes
+
+code:
+s1=sorted(set(input().strip()))
+s2=sorted(set(input().strip()))
+print("yes" if s1==s2 else"no")
