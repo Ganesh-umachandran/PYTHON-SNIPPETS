@@ -1,0 +1,19 @@
+input:
+3
+aeroplanae
+helicopter
+jet
+
+ouput:
+yes
+
+code:
+N,count=int(input()),0
+for i in range(N):
+    string=(input().strip()).lower()
+    for j in "aeiou":
+        if j in string:
+            count+=1
+            break
+print("yes" if count==N else "no")
+     
