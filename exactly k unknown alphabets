@@ -1,0 +1,9 @@
+s1,s2,k=map(str,input().split())
+s3,count,k,l=s1+s2,0,int(k),[]
+for i in s3:
+    if s3.count(i)==1:count+=1
+    elif (i in s1 and i not in s2)or (i not in s1 and i in s2):count+=1
+    elif i in s1 and i in s2 and s1.count(i)!=s2.count(i) and i not in l:
+        count+=1
+        l.append(i)
+print("yes" if count==k else "no")
