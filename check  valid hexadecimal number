@@ -1,0 +1,10 @@
+input:
+7cD
+
+output:
+yes
+
+code:
+import string
+a=input().strip()
+print( "yes" if all(i in string.hexdigits for i in a) else "no")
