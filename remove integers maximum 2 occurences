@@ -1,0 +1,15 @@
+input:
+7
+1 2 3 2 3 2 2
+
+output:
+1 2 3 2 3
+
+code:
+N=int(input())
+a=list(map(int,input().split()))
+l=[]
+for i in a:
+    if  l.count(i)<2:
+        print(i,end=" ")
+        l.append(i)
