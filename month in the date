@@ -1,0 +1,10 @@
+input:
+24-5-2018
+
+ouput:
+May
+
+code:
+D=list(map(int,input().split("-")))
+monthlist=["January","February","March","April","May","June","July","August","September","October","November","December"]
+print(monthlist[D[1]-1])
