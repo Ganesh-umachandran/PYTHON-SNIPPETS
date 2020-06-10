@@ -1,0 +1,13 @@
+#Your code below
+n,flag=input().strip(),0
+for i in range(len(n)):
+    a=int(n[i:]+n[0:i])
+    for i in range(2,a):
+        if a%i==0:
+            flag=1
+            break
+    if flag=1:
+        print("NO")
+        break
+if flag==0:
+    print("YES")
