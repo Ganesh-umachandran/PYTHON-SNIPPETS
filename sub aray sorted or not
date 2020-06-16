@@ -1,0 +1,18 @@
+input:
+5 2
+2 3 1 4 1
+
+output:
+Yes
+
+code:
+n,k=list(map(int,input().split()))
+l,flag=[int(i) for i in input().split()],0
+for i in range(0,n):
+    s,ns=sorted(l[i:i+k]),l[i:i+k]
+    if i+k<=n and (s==ns or s==ns[::-1]):
+        print("Yes")
+        flag=1
+        break
+if flag==0:print("No")
+    
