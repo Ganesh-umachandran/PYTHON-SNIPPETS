@@ -1,0 +1,15 @@
+input:
+213
+
+output:
+22-1-333
+2-111-33
+222-11-3
+
+code:
+n=input().strip()
+for i in range(len(n)):
+    sub,fstring=n[i:]+n[:i],""
+    for i in range(len(n)):
+        fstring+=(n[i]*int(sub[i]))+"-"
+    print(fstring[:-1])
