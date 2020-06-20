@@ -1,0 +1,16 @@
+input:
+4
+23 24 27 22
+
+ouput:
+yes
+
+code:
+n=int(input())
+num_list,count=[int(i) for i in input().split()],0
+if num_list[0]%2==0:first,second=0,1
+else: first,second=1,0
+for i in range(n):
+    if i%2==0 and num_list[i]%2==first:count+=1
+    elif i%2!=0 and num_list[i]%2==second:count+=1
+print("yes" if count==n else "no")
