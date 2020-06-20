@@ -1,0 +1,10 @@
+
+s1,l1=input().strip(),[]
+s2,l2=input().strip(),[]
+for i in s1:
+    if l1[-1]!=i:l1.append(i)
+for i in s2:
+    if l2[-1]!=i:l2.append(i)
+l1,l2="".join(l1),"".join(l2)
+print("Yes" if l1==l2 else "No")
+
