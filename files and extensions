@@ -1,0 +1,26 @@
+input:
+4
+testfile1.html
+testfile1.c
+testfile1.html
+testfile1.py
+
+output:
+2 .html
+1 .c
+1 .py
+
+code:
+n=int(input())
+extension_list1,order_list=[],[]
+for i in range(n):
+    dot_list=[]
+    filename=input().strip()
+    for i in range(len(filename)):
+        if filename[i]==".":dot_list.append(i)
+    extension=filename[dot_list[-1]+1:]
+    extension_list1.append(extension)
+    if extension not in order_list:
+        order_list.append(extension)
+for i in order_list:
+    print(extension_list1.count(i),"."+i)
