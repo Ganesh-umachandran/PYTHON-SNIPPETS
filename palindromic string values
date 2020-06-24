@@ -1,0 +1,10 @@
+
+from itertools import permutations
+permutation_str,l=permutations(sorted(input().strip())),[]
+for i in permutation_str:
+    string="".join(i)
+    if string==string[::-1] and string not in l:
+        l.append(string)
+for i in l:
+    print(i)
+if len(l)==0:print(-1)
