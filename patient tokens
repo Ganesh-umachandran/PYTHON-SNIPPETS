@@ -1,0 +1,24 @@
+input:
+3
+alex 10:30
+bobby 8:40
+charlie 9:50
+
+output:
+bobby 1
+charlie 2
+alex 3
+
+code:
+n=int(input())
+name_list,time_list,count=[],[],1
+for i in range(n):
+    name,time=list(map(str,input().split()))
+    time=time[0:2]+time[3:]
+    name_list.append(name+time)
+    time_list.append(time)
+for i in sorted(time_list):
+    for j in name_list:
+        if i in j:
+            print(j[:-4],count)
+            count+=1
