@@ -1,0 +1,24 @@
+input:
+5
+
+z a a a z
+a z a z a
+a a z a a
+a z a z a
+z a a a z
+
+code:
+n,flag,diagonal_list,non_diagonal_list=int(input()),0,[],[]
+for i in range(n):
+    row=list(map(str,input().split()))
+    for j in range(n):
+        if i==j or i==n-1-j:
+            diagonal_list.append(row[j])
+        else:
+            non_diagonal_list.append(row[j])
+if all(diagonal_list[0]==i for i in diagonal_list) and all(non_diagonal_list[0]==i for i in non_diagonal_list):
+    print("YES")
+else:
+    print("NO")
+    
+
