@@ -1,0 +1,29 @@
+input:
+4 3
+125 30 7 6
+
+output:
+21
+
+
+explanation:
+after removing first 3 even digits
+the list becomes 5 3 7 6
+so the sum is 21
+
+
+code:
+n,k=list(map(int,input().split()))
+l=list(map(str,input().split()))
+c,l1=0,[]
+for i in l:
+    a=""
+    for j in i:
+        if c<k and int(j)%2==0:c+=1
+        else:a+=j
+    if len(a)>0: 
+        l1.append(int(a))
+print(sum(l1))
+
+            
+            
