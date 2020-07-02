@@ -1,0 +1,27 @@
+input:
+3
+12 45 2
+
+output:
+12**2
+**45*
+12**2
+
+code:
+n=int(input())
+arr=list(map(str,input().split()))
+a,b=0,n-1
+for i in range(n):
+    for j in range(n):
+        if i==j:
+            print(arr[a],end="")
+            a+=1
+            if i+j==n-1:
+                b-=1
+        elif i+j==n-1:
+            print(arr[b],end="")
+            b-=1
+        else:
+            print("*"*len(str(arr[j])),end="")
+    print()
+        
