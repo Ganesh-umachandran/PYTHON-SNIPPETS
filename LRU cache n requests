@@ -1,0 +1,23 @@
+input
+5
+3
+1 2 1 3 1
+
+output:
+2 3 1
+
+code:
+n=int(input())
+r=int(input())
+cache=[]
+page=list(map(int,input().split()))
+for i in range(n):
+    if page[i] not in cache:
+        cache.append(page[i])
+    else:
+        cache.pop(cache.index(page[i]))
+        cache.append(page[i])
+if len(cache)>r:
+    cache=cache[len(cache)-r:len(cache)]
+for i in cache:
+    print(i,end=" ")
