@@ -1,0 +1,17 @@
+input:
+10 6
+
+ouput:
+27
+
+code:
+x,y=list(map(int,input().split()))
+x,y,final_num=bin(x)[2:][::-1],bin(y)[2:][::-1],""
+min_len=min(len(x),len(y))
+for i in range(min_len):
+    final_num+=x[i]+y[i]
+if min_len==len(x):
+    final_num+=y[min_len:]
+else:
+    final_num+=x[min_len:]
+print(int(str(int(final_num)),2))
