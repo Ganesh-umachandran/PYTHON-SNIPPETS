@@ -1,0 +1,15 @@
+input:
+101 115 2
+
+output:
+101 110 111 112 113 114 115
+
+code:
+x,y,n=list(map(int,input().split()))
+flag=0
+for i in range(x,y+1):
+    if len(set(str(i)))<=n:
+        print(i,end=" ")
+        flag=1
+if flag==0:
+    print(-1)
