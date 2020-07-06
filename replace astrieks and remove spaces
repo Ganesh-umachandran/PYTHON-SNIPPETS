@@ -1,0 +1,24 @@
+input:
+rock is wet
+
+output:
+rockiswet
+roc*i*we*
+ro****w**
+r********
+
+
+code:
+def replace_ast(s,num):
+    for i in s:
+        sub=i[:len(i)-num]+"*"*num
+        if len(i)<=num:
+            sub="*"*len(i)
+        print(sub,end="")
+s=list(map(str,input().split()))
+len_s=[len(i) for i in s]
+max_word=len(s[len_s.index(max(len_s))])
+for i in range(max_word):
+    replace_ast(s,i)
+    print()
+    
