@@ -1,0 +1,19 @@
+input:
+tab99 bag@1 tap23 
+
+output:
+tb99 bg@1 tap23
+
+code:
+string,final_str=list(map(str,input().split())),[]
+for i in range(len(string)-1):
+    s=""
+    for char in string[i]:
+        if  char not in string[i+1]:
+            s+= char
+    final_str.append(s)
+
+for i in final_str:
+    if len(i)>0:
+        print(i,end=" ")
+print(string[-1])
