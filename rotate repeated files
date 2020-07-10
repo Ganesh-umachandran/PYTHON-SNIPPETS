@@ -1,0 +1,14 @@
+#Your code below
+s=input().strip()
+l=[]
+for i in range(len(s)):
+    if s.count(s[i])>1:l.append(i)
+l=l[1:]+l[0:1]
+l1,c=len(l),0
+
+for i in range(len(s)):
+    if i in l:
+        print(s[l[c]],end="")
+        c+=1
+    else:print(s[i],end="")
+        
