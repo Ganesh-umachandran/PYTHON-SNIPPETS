@@ -1,0 +1,16 @@
+input:
+1 5 3 3 2
+
+output:
+3 4
+
+code:
+numbers=list(map(int,input().split()))
+maxnum,refer=max(numbers),[]
+for i in numbers:
+    if numbers.count(i)>1 and i not in refer:
+        print(i,end=" ")
+        refer.append(i)
+for i in range(1,maxnum+1):
+    if i not in numbers:
+        print(i,end=" ")
