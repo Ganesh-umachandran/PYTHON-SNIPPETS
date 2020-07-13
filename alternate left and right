@@ -1,0 +1,20 @@
+input:
+5
+1 2 5 3 4
+
+output:
+5 2 3 1 4
+
+code:
+n=int(input())
+l=list(map(int,input().split()))
+left,right=l[:l.index(max(l))][::-1],l[l.index(max(l)):]
+print(max(l))
+for i in range(min(len(left),len(right))):
+    print(left[i],right[i],end=" ")
+if min(len(left),len(right))==len(left):
+    for i in range(len(left),len(right)):
+        print(right[i],end=" ")
+else:
+    for i in range(len(right),len(left)):
+        print(left[i],end=" ")
