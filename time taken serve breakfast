@@ -1,0 +1,16 @@
+input:
+abcdefghijklmnopqrstuvwxyz
+dab
+
+output:
+7
+
+code:
+s=input().strip()
+x=input().strip()
+time_taken=s.index(x[0])
+for i in range(1,len(x)):
+    time_taken+=abs(s.index(x[i])-s.index(x[i-1]))
+    
+print(time_taken)
+
