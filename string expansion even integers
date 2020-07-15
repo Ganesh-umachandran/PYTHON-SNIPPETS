@@ -1,0 +1,20 @@
+input:
+a3b4c2d5
+
+output:
+a3bbbbccd5
+
+code:
+s=input().strip()
+for i in range(len(s)):
+    if s[i].isdigit() and s[i-1].isalpha():
+        num=s[i]
+        for j in range(i+1,len(s)):
+            if s[j].isdigit():
+                num+=s[j]
+            else:break
+        if int(num)%2==0:
+            print(s[i-1]*int(num),end="")
+        else:
+            print(s[i-1]+num,end="")
+            
