@@ -1,0 +1,21 @@
+input:
+7
+24 13 12 66 80 14 67
+
+output:
+12 12 24 80 66 14 67
+
+code:
+n=int(input())
+numbers,check=list(map(int,input().split())),0
+for i in range(n):
+    for j in range(i+1,n):
+        if numbers[i]%2==0 and numbers[j]%2==0 and check!=numbers[i]:
+            numbers[i],numbers[j]=numbers[j],numbers[i]
+            check=numbers[j]
+            
+            break
+for i in numbers:
+    print(i,end=" ")
+                
+        
