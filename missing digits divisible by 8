@@ -1,0 +1,19 @@
+input:
+X16
+
+ouput:
+2
+
+code:
+n,flag=list(input().strip()),0
+x=n.index("X")
+if x==0:start=1
+else:start=0
+for i in range(start,10):
+    n[x]=str(i)
+    full_number=int("".join(n))
+    if full_number%8==0:
+        print(i)
+        flag=1
+        break
+if flag==0:print(-1)
