@@ -1,0 +1,19 @@
+input:
+50 2
+
+output:
+300
+
+code:
+n,d=list(map(int,input().split()))
+for i in range(7):
+    if d==7:
+        n*=2
+        d=1
+    elif d==1:
+        n*=2
+        d+=1
+    else:
+        n+=5
+        d+=1
+print(n)
