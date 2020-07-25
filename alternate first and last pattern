@@ -1,0 +1,23 @@
+input:
+environment    
+
+output:
+nvironmen                                                                                                                              
+evironmet                                                                                                                              
+enironmnt                                                                                                                              
+envronent                                                                                                                              
+envioment                                                                                                                              
+envirnment  
+
+code:
+s1=input().strip()
+s,e=0,len(s1)-1
+for i in range(len(s1)):
+    for j in range(len(s1)):
+        if j!=s or  j!=e:
+            print(s1[j],end="")
+    print()
+    s,e=s+1,e-1
+    if s>e:
+        break
+        
