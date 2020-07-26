@@ -1,0 +1,30 @@
+input:
+22
+
+output:
+30
+
+input:
+15
+
+output:
+15
+
+code:
+n=list(bin(int(input())))[2:]
+numbers=[]
+for i in range(len(n)):
+    if n[i]=="1":
+        n[i]="0"
+        numbers.append(int("".join(n),2))
+        n[i]="1"
+    else:
+        n[i]="1"
+        numbers.append(int("".join(n),2))
+        n[i]="0"
+if all(i=="1" for i in n):
+    print(int("".join(n),2))
+else:
+    print(max(numbers))
+
+    
