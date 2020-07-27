@@ -1,0 +1,60 @@
+input:
+3 4
+1 2 3 4
+5 6 7 8 
+9 0 1 2
+3 4 5 6
+R
+
+output:
+1 1 1 1
+5 5 5 5
+9 9 9 9
+3 3 3 3
+
+input:
+3 4
+1 2 3 4
+5 6 7 8 
+9 0 1 2
+3 4 5 6
+D
+
+output:
+3 4 5 6
+3 4 5 6
+3 4 5 6
+3 4 5 6
+
+code:
+r,c=list(map(int,input().split()))
+m=[]
+for i in range(r):
+    m.append(list(map(int,input().split())))
+ch=(input().strip()).lower()
+if ch=="d":
+    for i in range(r):
+        for j in range(c):
+            print(m[r-1][j],end=" ")
+        print()
+elif ch=="u":
+    for i in range(r):
+        for j in range(c):
+            print(m[0][j],end=" ")
+        print()
+elif ch=="r":
+    for i in range(r):
+        for j in range(c):
+            print(m[i][c-1],end=" ")
+        print()
+elif ch=="l":
+    for i in range(r):
+        for j in range(c):
+            print(m[i][0],end=" ")
+        print()
+        
+else:
+    for i in range(r):
+        for j in range(c):
+            print(m[i][j],end=" ")
+        print()
