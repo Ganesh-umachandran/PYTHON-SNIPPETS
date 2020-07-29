@@ -1,0 +1,28 @@
+input:
+5
+m r m b a
+a a a o b
+l c d a m
+a e c a r
+y a l a m
+
+output:
+malayalam
+racecar
+madam
+bob
+a
+
+code:
+n=int(input())
+matrix=[]
+for i in range(n):
+    matrix.append(list(map(str,input().split())))
+for i in range(n):
+    string=""
+    for r1 in range(0,n-i):
+        string+=matrix[r1][i]
+    for c1 in range(i+1,n):
+        string+=matrix[n-1-i][c1]
+    if string==string[::-1]:
+        print(string)
