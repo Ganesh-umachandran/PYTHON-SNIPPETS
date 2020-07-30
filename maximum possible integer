@@ -1,0 +1,20 @@
+input:
+35
+
+ouput:
+29
+
+explanation:
+3+5<2+9
+
+code:
+n=int(input())
+sum_n,flag=sum([int(i) for i in str(n)]),0
+for i in range(n,-1,-1):
+    if sum([int(i) for i in str(i)])>sum_n:
+        print(i)
+        flag=1
+        break
+if flag==0:
+    print(n)
+    
