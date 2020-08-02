@@ -1,0 +1,23 @@
+input:
+4 5
+4 3 2 1
+2 4 6 8
+16 12 8 4
+8 18 24 32
+64 48 36 16
+
+code:
+n,t=list(map(int,input().split()))
+l=[i for i in range(n,0,-1)]
+for i in l:
+    print(i,end=" ")
+print()
+for j in range(t-1):
+    l=l[::-1]
+    for i in range(n):
+        l[i]*=2
+        print(l[i],end=" ")
+    print()
+        
+        
+    
