@@ -1,0 +1,21 @@
+input:
+2
+123 54
+
+output:
+4294967172                                                                                                                           
+4294967241 
+
+code:
+n=int(input())
+l=list(map(int,input().split()))
+l1=[]
+for i in range(n):
+    b=bin(l[i])[2:]
+    tb=""
+    for i in b:
+        if i=="1":
+            tb+="0"
+        else:
+            tb+="1"
+    print(int((32-len(b))*"1"+tb,2))
