@@ -1,0 +1,28 @@
+input:
+telephone
+phone
+3
+
+output:
+hon one pho
+
+code:
+s1=input().strip()
+s2=input().strip()
+sub_s1,sub_s2=[],[]
+x=int(input())
+for i in range(len(s1)):
+    if i+x<=len(s1):
+        sub_s1.append(s1[i:i+x])
+for i in range(len(s2)):
+    if i+x<=len(s2):
+        sub_s2.append(s2[i:i+x])
+commmon=[]
+for i in sub_s1:
+    if i in sub_s2:
+        commmon.append(i)
+if len(commmon)>0:
+    for i in sorted(commmon):
+        print(i,end=" ")
+else:
+    print(-1)
