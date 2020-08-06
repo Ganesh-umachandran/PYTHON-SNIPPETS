@@ -1,0 +1,76 @@
+input:
+3
+1 2 3
+4 5 6
+7 8 9
+elonmusk
+
+output:
+e 2 n
+4 m 6
+l 8 o
+
+code:
+def check(m,n,arr):
+    
+    k,l,cnt,a=0,0,0,0
+    total=m*n
+    while(k<m and l<n):
+        if cnt== total:
+            break
+        for i in range(k,m):
+            if int(arr[i][l])%2!=0:
+                arr[i][l]=s[a]
+                if a<len(s)-1:
+                    a+=1
+                else:
+                    a=0
+            cnt+=1
+        l+=1
+        if cnt==total:
+            break
+        for i in range(l,n):
+            if int(arr[m-1][i])%2!=0:
+                arr[m-1][i]=s[a]
+                if a<len(s)-1:
+                    a+=1
+                else:
+                    a=0
+            cnt+=1
+        m-=1
+        if cnt==total:
+            break
+        if k<m:
+            for i in range(m-1,k-1,-1):
+                if int(arr[i][n-1])%2!=0:
+                    arr[i][n-1]=s[a]
+                    if a<len(s)-1:
+                        a+=1
+                    else:
+                        a=0
+                cnt+=1
+            n-=1
+        if cnt==total:
+            break
+        if l<n:
+            for i in range(n-1,l-1,-1):
+                if int(arr[k][i])%2!=0:
+                    arr[k][i]=s[a]
+                    if a<len(s)-1:
+                        a+=1
+                    else:
+                        a=0
+                cnt+=1
+            k+=1
+                    
+            
+n=int(input())
+mat=[]
+for i in range(n):
+    mat.append(list(map(str,input().split())))
+s=input().strip()
+check(n,n,mat)
+for i in range(n):
+    for j in range(n):
+        print(mat[i][j],end=" ")
+    print()
