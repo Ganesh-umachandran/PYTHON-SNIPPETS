@@ -1,0 +1,22 @@
+input:
+4
+12 24 42 14
+
+ouput:
+0 42
+12 14
+24 0
+0 0
+
+code:
+n=int(input())
+l=list(map(int,input().split()))
+for i in range(n):
+    leftsum,rightsum=0,0
+    for j in range(i-1,-1,-1):
+        if str(l[i])[0]==str(l[j]%10):
+            leftsum+=l[j]
+    for j in range(i+1,n):
+        if l[i]%10==l[j]%10:
+            rightsum+=l[j]
+    print(leftsum,rightsum)
