@@ -1,0 +1,17 @@
+input:
+2 2 2 4 3 3
+
+output:
+27
+
+code:
+#Your code below
+l=list(map(int,input().split()))
+s,new_l=0,[]
+for i in range(len(l)):
+    if i-1>=0 and l[i]==l[i-1]:
+        new_l.append(2*new_l[i-1])
+    else:
+        new_l.append(l[i])
+print(sum(new_l))
+        
