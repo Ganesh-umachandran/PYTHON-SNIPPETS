@@ -1,0 +1,14 @@
+r,c=map(int,input().split())
+count,row_mat=0,[]
+for i in range(r):
+    row_mat.append(list(map(int,input().split())))
+for i in range(c):
+    flag=0
+    for j in range(r):
+        if j+1<r and row_mat[j][i]<row_mat[j+1][i]:
+            flag=1
+            break
+    if flag==0:
+        count+=1
+
+print(count)
