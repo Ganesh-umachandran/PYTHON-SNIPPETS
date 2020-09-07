@@ -1,0 +1,19 @@
+l=list(map(str,input().split()))
+for i in range(len(l)//2):
+    if i%2==0:
+        m=min(len(l[i]),len(l[len(l)-1-i]))
+        if len(l[i])==len(l[len(l)-1-i]):
+            print(l[i],l[len(l)-1-i],end=" ")
+        elif m==len(l[i]):
+            print(l[i],end=" ")
+        else:
+            print(l[len(l)-1-i],end=" ")
+    else:
+        m=max(len(l[i]),len(l[len(l)-1-i]))
+        if len(l[i])==len(l[len(l)-1-i]):
+            print(l[i],l[len(l)-1-i],end=" ")
+        elif m==len(l[i]):
+            print(l[i],end=" ")
+        else:
+            print(l[len(l)-1-i],end=" ")
+        
