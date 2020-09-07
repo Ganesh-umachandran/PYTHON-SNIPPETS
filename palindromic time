@@ -1,0 +1,21 @@
+hr,mi=map(int,input().split(":"))
+while(True):
+    if mi<59:mi+=1
+    else:
+        mi=0
+        if hr<23:hr+=1
+        else:hr=0
+    if len(str(hr))==1:
+        hr='0'+str(hr)
+    else:
+        hr=str(hr)
+    if len(str(mi))==1:
+        mi='0'+str(mi)
+    else:
+        mi=str(mi)
+    if hr+mi==(hr+mi)[::-1]:
+        print(hr+":"+mi)
+        break
+    else:
+        hr,mi=int(hr),int(mi)
+            
