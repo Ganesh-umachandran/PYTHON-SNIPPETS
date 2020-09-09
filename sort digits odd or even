@@ -1,0 +1,8 @@
+n,s=int(input()),0
+num_list=list(map(str,input().split()))
+for i in num_list:
+    if int(i)%2==0:
+        s+=int("".join(sorted(list(i[:-1]))[::-1])+i[-1])
+    else:
+        s+=int("".join(sorted(list(i[:-1])))+i[-1])
+print(s)
