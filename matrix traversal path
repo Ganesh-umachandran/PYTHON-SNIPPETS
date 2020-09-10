@@ -1,0 +1,28 @@
+r,c=map(int,input().split())
+l,l1=[],[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+x,y=map(int,input().split())
+x,y=x-1,y-1
+p=input().strip()
+l1.append(l[x][y])
+for i in p:
+    if i=="<" and y-1>=0:
+        l1.append(l[x][y-1])
+        y-=1
+    elif i==">" and y+1<c:
+        l1.append(l[x][y+1])
+        y+=1
+    elif i=="v" and x+1<r:
+        l1.append(l[x+1][y])
+        x+=1
+    elif i=="^" and x-1>=0:
+        l1.append(l[x-1][y])
+        x-=1
+    else:
+        l=[]
+        print("Invalid Path")
+        break
+if len(l)>0:
+    for i in l1:
+        print(i,end=" ")
