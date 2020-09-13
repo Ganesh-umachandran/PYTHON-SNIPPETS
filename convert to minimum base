@@ -1,0 +1,10 @@
+s,s1=input().strip(),[]
+for i in s:
+    s1.append(i)
+s1=sorted(s1)
+if s1[-1].isalpha():
+    a=ord(s1[-1])-54
+else:
+    a=int(s1[-1])+1
+print(int(s,a))
+    
