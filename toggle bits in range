@@ -1,0 +1,11 @@
+n=bin(int(input()))[2:]
+s,e=map(int,input().split())
+if e>len(n):
+    n="0"*(e-len(n))+n
+n=list(n)
+for i in range(s-1,e):
+    if n[i]=="1":
+        n[i]="0"
+    else:
+        n[i]="1"
+print(int("".join(n),2))
