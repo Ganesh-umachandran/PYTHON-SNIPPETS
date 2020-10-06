@@ -1,0 +1,8 @@
+from itertools import permutations
+n=[str(i) for i in sorted([int(i) for i in input().strip()])]
+p,l=permutations(n,len(n)),[]
+for i in p:
+    a=int("".join(list(i)))
+    if a%2!=0 and a not in l:
+        print(a,end=" ")
+        l.append(a)
