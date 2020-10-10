@@ -1,0 +1,26 @@
+n,c,w,m=int(input()),0,0,0
+for i in range(n):
+    a,b=map(str,input().split())
+    if b=="children":
+        c+=1
+    elif b=="women":
+        w+=1
+    else:
+        m+=1
+n=int(input())
+if c<=n:
+    print(c,end=" ")
+    n-=c
+else:
+    print(n,end=" ")
+    n=0
+if w<=n:
+    print(w,end=" ")
+    n-=w
+else:
+    print(n,end=" ")
+    n=0
+if m<=n:
+    print(m,end=" ")
+else:
+    print(n)
