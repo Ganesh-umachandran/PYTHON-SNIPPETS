@@ -1,0 +1,29 @@
+n,l,l1=int(input()),[],[]
+for i in range(n):
+    l.append(input().strip())
+a=len(l[0])
+if n%2==0:
+    r=n+a-1
+    c=r-1
+else:
+    r=n+a-2
+    c=r+1
+for i in range(r):
+    l1.append(["*" for i in range(c)])
+for i in range(n):
+    b=l[i]
+    if i%2==0:
+        k=0
+        for j  in range(i,i+a):
+            l1[i][j]=b[k]
+            k+=1
+    else:
+        k=0
+        for j in range(i,i+a):
+            l1[j][i]=b[k]
+            k+=1
+for i in range(r):
+    for j in range(c):
+        print(l1[i][j],end="")
+    print()
+        
