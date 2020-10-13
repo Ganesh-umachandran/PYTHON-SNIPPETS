@@ -1,0 +1,16 @@
+s1=input().strip()
+s2=input().strip()
+for i in range(len(s1)):
+    if s2==s1[i:]+s1[:i]:
+        break
+l=i
+for i in range(len(s1)):
+    if s2==s1[len(s1)-i:]+s1[:len(s1)-i]:
+        break
+r=i
+if l<r:
+    print("L",l,sep="")
+elif r<l:
+    print("R",r,sep="")
+else:
+    print("A",l,sep="")
