@@ -1,0 +1,14 @@
+p=input().strip()
+s=[str(i) for i in input().split() if len(i)==len(p)]
+for j in s:
+    flag=0
+    for i in range(len(p)):
+        if p[i]!="?" and j[i]!=p[i]:
+            flag=1
+            break
+    if flag==0:
+        print(j)
+        break
+            
+        
+    
