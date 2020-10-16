@@ -1,0 +1,6 @@
+#Your code below
+s=input().strip().lower()
+if s.count("u")==s.count("d") and s.count("r")==s.count("l"):
+    print("YES")
+else:
+    print("NO")
