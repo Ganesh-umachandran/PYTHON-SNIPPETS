@@ -1,0 +1,20 @@
+#Your code below
+s=input().strip()
+f,l=s[:len(s)//2],s[len(s)//2:]
+if len(s)%2!=0:
+    l=l[1:]
+f,l=f[::-1],l[::-1]
+f2,f1,s2,s1=f[len(f)//2:],f[:len(f)//2],l[len(l)//2:],l[:len(l)//2]
+if len(f)%2!=0:
+    f2,s2=f2[1:],s2[1:]
+f1,f2,s1,s2=f1[::-1],f2[::-1],s1[::-1],s2[::-1]
+if len(s)%2==0:
+    if len(f)%2==0:
+        print(f1+f2+s1+s2)
+    else:
+        print(f1+f[len(f)//2]+f2+s1+l[len(l)//2]+s2)
+else:
+    if len(f)%2==0:
+        print(f1+f2+s[len(s)//2]+s1+s2)
+    else:
+        print(f1+f[len(f)//2]+f2+s[len(s)//2]+s1+l[len(l)//2]+s2)
