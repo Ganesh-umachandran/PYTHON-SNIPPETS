@@ -1,0 +1,17 @@
+#Your code below
+n,oddsum,evensum=int(input()),[],[]
+l=list(map(str,input().split()))
+for i in l:
+    os,es=0,0
+    for j in i:
+        if int(j)%2==0:
+            es+=int(j)
+        else:
+            os+=int(j)
+    oddsum.append(os)
+    evensum.append(es)
+for i in range(n):
+    if int(l[i])%2==0:
+        print(int(l[i])+(sum(evensum)-evensum[i]),end=" ")
+    else:
+        print(int(l[i])+(sum(oddsum)-oddsum[i]),end=" ")
