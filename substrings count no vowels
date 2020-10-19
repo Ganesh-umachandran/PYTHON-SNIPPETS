@@ -1,0 +1,16 @@
+#Your code below
+s,ref,count,m=input().strip(),"AEIOUaeiou",0,0
+for i in s:
+    if i not in ref:
+        count+=1
+    else:
+        if count>2:
+            m+=1+sum([int(i) for i in range(count-1,1,-1)])
+        elif count==2:
+            m+=1
+        count=0
+if count==2:
+    m+=1
+elif count>2:
+    m+=1+sum([int(i) for i in range(count-1,1,-1)])
+print(m)
