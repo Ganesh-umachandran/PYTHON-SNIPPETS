@@ -1,0 +1,12 @@
+s=sorted([int(i) for i in input().strip()])
+for i in range(len(s)-1,-1,-1):
+    if i==len(s)-1 and s[i]%2==0:
+        if s[i-1]%2!=0:
+            print(*s[-2:],sep="")
+            break
+        else:
+            print(s[-1],s[-2],sep="")
+            break
+    elif s[i]%2==0:
+        print(s[-1],s[i],sep="")
+        break
