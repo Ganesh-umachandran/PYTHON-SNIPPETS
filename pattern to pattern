@@ -1,0 +1,6 @@
+for i in list(input().split(":")):
+    s=[int(j) for j in i.split("-")]
+    for k in range(len(s)-1):
+        print(*[int(j) for j in range(s[k],s[k+1]+1)])
+        
+
