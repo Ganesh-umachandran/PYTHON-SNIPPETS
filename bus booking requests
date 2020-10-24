@@ -1,0 +1,6 @@
+l=[0 for i in range(int(input()))]
+for i in range(int(input())):
+    s,e,a=map(int,input().split())
+    for i in range(s-1,e):
+        l[i]+=a
+print(*l)
