@@ -1,0 +1,25 @@
+#Your code below
+n=int(input())
+l,l1,l2=[],[],[]
+for i in range(n):
+    n,y=map(str,input().split())
+    if n not in l:
+        l.append(n)
+        l1.append(n+y)
+        l2.append(int(y))
+    else:
+        i=l.index(n)
+        if l2[i]<int(y):
+            l2[i]=int(y)
+            l1[i]=n+y
+l=[]
+l1,l2=sorted(l1),sorted(l2)[::-1]
+for i in l2:
+    for j in l1:
+        if int(j[-4:])==i and j not in l:
+            print(j[:-4],j[-4:])
+            l.append(j)
+        
+        
+            
+    
