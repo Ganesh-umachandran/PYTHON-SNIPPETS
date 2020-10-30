@@ -1,0 +1,13 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+s=list(input().strip())
+for i in l:
+    for j in range(i):
+        ns=ord(s[j])+1
+        if s[j]=="z":
+            ns=ord("a")
+        if s[j]=="Z":
+            ns=ord("A")
+        s[j]=chr(ns)
+print(*s,sep="")
