@@ -1,0 +1,6 @@
+n=list(map(int,input().split()))
+l=sorted([i for i in n])
+for i in n:
+    a=l.index(i)+1
+    print(l[a] if a<len(n) else -1,end=" ")
+   
