@@ -1,0 +1,17 @@
+s1=input().strip()
+s2,flag=input().strip(),0
+if all(s1[0]==i for i in s1):
+    print(s1[0])
+else:
+    for i in range(0,len(s2),len(s1)):
+        if s2[i:i+len(s1)]!=s1:
+            sub=s2[i:i+len(s1)]
+            for j in range(len(s1)):
+                if sub[j]!=s1[j]:
+                    print(s1[j])
+                    flag=1
+                    break
+        if flag==1:
+            break
+                
+    
