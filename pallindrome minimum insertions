@@ -1,0 +1,6 @@
+s=input().strip()
+count=0
+for i in set(s):
+    if s.count(i)%2!=0:
+        count+=1
+print(count-1 if count>0 else 0)
