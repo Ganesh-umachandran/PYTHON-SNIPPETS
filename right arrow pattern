@@ -1,0 +1,9 @@
+#Your code below
+n,l=int(input()),[]
+for i in range(0,(n-1)//2):
+    line="-"*(((n-1)//2)+i)+"*"
+    print(line)
+    l.append(line)
+print("*"*n)
+for i in l[::-1]:
+    print(i)
