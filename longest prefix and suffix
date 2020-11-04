@@ -1,0 +1,8 @@
+s,f,m=input().strip(),0,0
+for i in range(len(s)):
+    if s[:i]==s[-i:]:
+        f=1
+        if m<len(s[:i]):
+            m=len(s[:i])
+print(-1 if f==0 else m)
+
