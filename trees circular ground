@@ -1,0 +1,23 @@
+#Your code below
+a=int(input())
+b=list(map(int,input().split()))
+c,d=map(int,input().split())
+f=0
+for i in range(d):
+    g,e=0,[]
+    while(g<c):
+        e.append(f)
+        g+=1
+        f+=1
+        if f==a:
+            f=0
+    for i in range(a):
+        if i in e:
+            b[i]-=1
+        else:
+            b[i]+=1
+    for i in range(0,a):
+        if b[i]==0:
+            b[i]=1
+print(*b)
+        
