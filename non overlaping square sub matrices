@@ -1,0 +1,16 @@
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+a=min(r,c)
+for h in range(2,a+1):
+    for i in range(0,r,h):
+        if i+h>r:
+            break
+        for j in range(0,c,h):
+            if j+h>c:
+                break
+            for ii in range(i,i+h):
+                for jj in range(j,j+h):
+                    print(l[ii][jj],end=" ")
+                print()
