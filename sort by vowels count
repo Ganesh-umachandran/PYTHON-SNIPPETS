@@ -1,0 +1,2 @@
+l=list(map(str,input().split()))
+print(*sorted(l,key=lambda w: sum(ch in "AEIOUaeiou" for ch in w),reverse=True))
