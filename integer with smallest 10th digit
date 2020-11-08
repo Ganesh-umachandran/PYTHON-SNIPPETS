@@ -1,0 +1,10 @@
+#Your code below
+n,ref,flag=int(input()),"0123456789",0
+l=list(map(str,input().split()))
+for i in ref:
+    for j in l:
+        if len(j)>1 and j[-2]==i:
+            print(j,end=" ")
+            flag=1
+    if flag==1:
+        break
