@@ -1,0 +1,6 @@
+#Your code below
+n=int(input())
+l=[str(i)[-1] for i in input().split()]
+for i  in range(0,n,3):
+    value=int("".join(sorted(l[i:i+3])[::-1]))
+    print(value if value>0 else -1,end=" ")
