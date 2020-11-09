@@ -1,0 +1,21 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(c-1,-1,-1):
+    a=0
+    for j in range(i,c):
+        if a>=r or j>=c:
+            break
+        print(l[a][j],end=" ")
+        a+=1
+    print()
+for i in range(1,r):
+    a=0
+    for j in range(i,r):
+        if a>=c or j>=r:
+            break
+        print(l[j][a],end=" ")
+        a+=1
+    print()
