@@ -1,0 +1,15 @@
+#Your code below
+n=int(input())
+l,c=list(map(str,input().split())),0
+for i in range(n-1):
+    for j in list(map(str,input().split())):
+        if j in l:
+            l.append(j)
+ref=[]
+for i in l:
+    if i not in ref and l.count(i)>=n:
+        c+=1
+        ref.append(i)
+print(c)
+            
+            
