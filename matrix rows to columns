@@ -1,0 +1,14 @@
+#Your code below
+n,l=int(input()),[]
+for i in range(n):
+    l.append(list(map(int,input().split())))
+l1=[]
+for i in range(n):
+    s=[]
+    for j in range(n):
+        s.append(l[l[0][i]-1][j])
+    l1.append(s)
+for i in range(n):
+    for j in range(n):
+        print(l1[j][i],end=" ")
+    print()
