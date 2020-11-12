@@ -1,0 +1,9 @@
+#Your code below
+n=int(input())
+p=int(input())
+q,c=int(input()),0
+for i in range(p):
+    n+=p
+    if q in str(n):
+        c+=1
+print(c)
