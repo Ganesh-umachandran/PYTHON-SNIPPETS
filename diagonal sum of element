@@ -1,0 +1,12 @@
+#Your code below
+r,c=map(int,input().split())
+l,s=[],0
+for i in range(r):
+    l.append(list(map(int,input().split())))
+m,n=map(int,input().split())
+m,n=m-1,n-1
+for i in range(min(m,n),-1,-1):
+    s+=l[m-i][n-i]
+for i in range(min(r-1-m,c-1-n),-1,-1):
+    s+=l[m+i][n+i]
+print(s-l[m][n])
