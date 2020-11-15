@@ -1,0 +1,25 @@
+n=int(input())
+q1,q2,q3,q4=0,0,0,0
+l,flag=[],0
+for i in range(n):
+    l.append(list(map(int,input().split())))
+for i in range(n//2):
+    for j in range(n//2):
+        q1+=l[i][j]
+for i in range(n//2):
+    for j in range(n//2,n):
+        q2+=l[i][j]
+for i in range(n//2,n):
+    for j in range(n//2):
+        q3+=l[i][j]
+for i in range(n//2,n):
+    for j in range(n//2,n):
+        q4+=l[i][j]
+l=[q1,q2,q3,q4]
+for i in l:
+    if l.count(i)>1:
+        print("YES")
+        flag=1
+        break
+if flag==0:
+    print("NO")
