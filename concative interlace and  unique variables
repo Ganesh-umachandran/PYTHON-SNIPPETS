@@ -1,0 +1,22 @@
+#Your code below
+s1=input().strip()
+s2=input().strip()
+ch=input().strip()
+if ch=="+":
+    print(s1+s2)
+elif ch=="-":
+    new_s1=list(s1)
+    for i in s2:
+        if i in new_s1:
+            new_s1.pop(new_s1.index(i))
+    if len(new_s1)>0:
+        print(*new_s1,sep="") 
+    else:
+        print(-1)
+else:
+    for i in range(max(len(s1),len(s2))):
+        if i<len(s1):
+            print(s1[i],end="")
+        if i<len(s2):
+            print(s2[i],end="")
+        
