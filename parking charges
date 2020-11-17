@@ -1,0 +1,31 @@
+#Your code below
+n,cost_list,parking_hour=int(input()),[],[]
+for i in range(n):
+    time,cost=map(str,input().split())
+    hour,minutes=map(int,time.split(":"))
+    cost=int(cost)
+    if hour==0:
+        cost_list.append(cost)
+    elif hour>=1:
+        if minutes<=30:
+            cost_list.append(hour*cost)
+        else:
+            cost_list.append((hour+1)*cost)
+    parking_hour.append(int(time[:2]+time[3:]))
+chk_hour,chk_min,chk_cost=map(str,input().split())
+if len(chk_hour)<2:
+    chk_hour="0"+chk_hour
+if len(chk_min)<2:
+    chk_min="0"+chk_min
+chk_time=int(chk_hour+chk_min)
+chk_cost=int(chk_cost)
+hour_count,cost_count=0,0
+for i in cost_list:
+    if i>chk_cost:
+        cost_count+=1
+for i in parking_hour:
+    if i>chk_time:
+        hour_count+=1
+print(hour_count )
+print(cost_count)
+        
