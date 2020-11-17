@@ -1,0 +1,6 @@
+#Your code below
+n,l=int(input()),[]
+for i in range(n):
+    l.append(input().strip()[:3])
+for i in sorted(set(l)):
+    print(i,l.count(i))
