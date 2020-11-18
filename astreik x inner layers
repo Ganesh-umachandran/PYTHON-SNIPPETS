@@ -1,0 +1,17 @@
+#Your code below
+n=int(input())
+matrix=[]
+for row in range(n):
+    matrix.append(list(map(str,input().split())))
+x=int(input())
+start,finish=(n//2)-x,(n//2)+x
+if n%2!=0:
+    start+=1
+for row in range(n):
+    for col in range(n):
+        if row>=start and row<finish and col>=start and col<finish:
+            print("*",end=" ")
+        else:
+            print(matrix[row][col],end=" ")
+    print()
+        
