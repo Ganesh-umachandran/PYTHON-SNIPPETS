@@ -1,0 +1,22 @@
+#Your code below
+s1=input().strip().lower()
+s2=input().strip().lower()
+flag=0
+if len(s1)==len(s2):
+    for i in range(len(s1)):
+        if s1[i:]==s2[i:]:
+            print(i*2)
+            flag=1
+            break
+else:
+    if len(s1)<len(s2):
+        s1,s2=s2,s1
+    sub_val=len(s1)-len(s2)
+    for i in range(len(s2)):
+        if s1[i+sub_val:]==s2[i:]:
+            print(sub_val+(i*2))
+            flag=1
+            break
+if flag==0:
+    print(-1)
+        
