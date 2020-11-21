@@ -1,0 +1,15 @@
+#Your code below
+n,flag=input().strip(),0
+for i in range(len(n)):
+    if n[i]=="0":
+        if int(n[:i]+"1"+n[i+1:],2)%5==0:
+            print("Yes")
+            flag=1
+            break
+    else:
+        if int(n[:i]+"0"+n[i+1:],2)%5==0:
+            print("Yes")
+            flag=1
+            break
+if flag==0:
+    print("No")
