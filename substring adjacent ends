@@ -1,0 +1,11 @@
+#Your code below
+s,count=input().strip().lower(),0
+for i in range(len(s)):
+    for j in range(i+1,len(s)):
+        if (s[i]=="a" and s[j]=="z") or (s[i]=="z" and s[j]=="a"):
+            count+=1
+       
+        elif ord(s[i])-1==ord(s[j]) or ord(s[i])+1==ord(s[j]):
+            count+=1
+       
+print(count)
