@@ -1,0 +1,7 @@
+s=""
+for i in [int(i) for i in input().strip()][::-1]:
+    if i%2==0:
+        s+=str(i*i)[::-1]
+    else:
+        s+=str(i)
+print(int(s))
