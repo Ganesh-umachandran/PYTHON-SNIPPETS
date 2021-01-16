@@ -1,0 +1,14 @@
+#Your code below
+s=input().strip()
+l=[]
+def split(s,c):
+    for i in range(1,len(s)):
+        m=str(s[:i].count("0"))
+        n=str(s[i:].count("1"))
+        p=int(m+n)
+        l.append(p)
+        if c==1 and p==max(l):
+            print(s[:i],s[i:])
+            break
+split(s,0)
+split(s,1)
