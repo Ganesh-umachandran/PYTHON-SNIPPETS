@@ -1,0 +1,14 @@
+#Your code below
+s=input().strip()
+n=int(input())
+l,m,w=[],0,""
+for i in range(n):
+    l.append(input().strip())
+for i in l:
+    c=0
+    for j in i:
+        c+=s.index(j)+1
+    if c>m:
+        m=c
+        w=i
+print(w)
