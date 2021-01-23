@@ -1,0 +1,18 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(c):
+    a=[]
+    for j in range(r):
+        if str(l[j][i]).count("0")>=1:
+            a.append(l[j][i])
+    if len(a)==1:
+        for j in range(r):
+            if l[j][i] not in a:
+                l[j][i]+=1
+for i in range(r):
+    for j in range(c):
+        print(l[i][j],end=" ")
+    print()
