@@ -1,0 +1,20 @@
+#Your code below
+s=input().strip()
+x,y,l,f=0,0,[],0
+for i in range(len(s)):
+    if s[i]=="N":
+        y+=1
+    elif s[i]=="S":
+        y-=1
+    elif s[i]=="E":
+        x+=1
+    else:
+        x-=1
+    l.append(str(x)+str(y))
+for i in l:
+    if l.count(i)>1 or i=="00":
+        print("YES")
+        f=1
+        break
+if f==0:
+    print("NO")
