@@ -1,0 +1,16 @@
+#Your code below
+n=int(input())
+l,l1=[],[]
+for i in range(n):
+    n,c=map(str,input().split())
+    l.append(n+"-"+c)
+    if int(c) not in l1:
+        l1.append(int(c))
+for i in sorted(l1)[::-1]:
+    print(i,end=" ")
+    c=[]
+    for j in range(len(l)):
+        a,b=map(str,l[j].split("-"))
+        if int(b)==i:
+            c.append(a)
+    print(*sorted(c),sep=", ")
