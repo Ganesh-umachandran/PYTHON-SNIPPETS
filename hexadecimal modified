@@ -1,0 +1,15 @@
+l,f="ABCDEF10",0
+n=hex(int(input()))[2:].upper())
+for i in n:
+    if i not in l:
+        print(-1)
+        f=1
+        break
+if f==0:
+    for i in n:
+        if i=="1":
+            print("L",end="")
+        elif i=="0":
+            print("O",end="")
+        else:
+            print(i,end="")
