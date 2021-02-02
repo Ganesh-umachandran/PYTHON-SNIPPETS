@@ -1,0 +1,10 @@
+#Your code below
+s=input().strip()
+s=int(s)+int(s[::-1])
+if str(s)==str(s)[::-1]:
+    print(s)
+else:
+    for i in range(s+1,s+1000):
+        if str(i)==str(i)[::-1]:
+            print(i)
+            break
