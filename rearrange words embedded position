@@ -1,0 +1,17 @@
+#Your code below
+n=list(map(str,input().split()))
+l=[]
+for i in range(len(n)+1,0,-1):
+    for j in range(len(n)):
+        if str(i) in n[j]:
+            s=""
+            for k in n[j]:
+                if k.isdigit():
+                    s+=""
+                else:
+                    s+=k
+            l.append(s)
+            n.pop(j)
+            break
+print(*l[::-1])
+    
