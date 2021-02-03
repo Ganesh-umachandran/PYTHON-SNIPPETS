@@ -1,0 +1,9 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+t=int(input())
+if l.count(t)<2 or len(l)==2:
+    print(-1)
+else:
+    a,b=l.index(t),l[::-1].index(t)
+    print(*sorted(l[a+1:-b-1]))
