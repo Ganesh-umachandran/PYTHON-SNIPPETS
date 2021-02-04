@@ -1,0 +1,10 @@
+#Your code below
+n=(2**int(input()))
+s=len(bin(n-1)[2:])
+for i in range(n):
+    a=bin(i)[2:]
+    if len(a)<s:
+        a=list(((s-len(a))*"0")+a)
+        print(*a)
+    else:
+        print(*list(a))
