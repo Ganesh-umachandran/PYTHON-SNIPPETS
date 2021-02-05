@@ -1,0 +1,25 @@
+#Your code below
+n=input().strip()
+l=sum([int(i) for i in n])
+n=int(n)
+l1=[]
+if n%l==0:
+    for j in range(n,0,-1):
+        a=sum([int(i) for i in str(j)])
+        if j%a!=0:
+            break
+        else:
+            l1.append(j)
+    l1=l1[::-1]
+    for j in range(n+1,n+100):
+        a=sum([int(i) for i in str(j)])
+        if j%a!=0:
+            break
+        else:
+            l1.append(j)
+    if len(l1)>1:
+        print(len(l1),l1.index(n)+1)
+    else:
+        print(-1)
+else:
+    print(-1)
