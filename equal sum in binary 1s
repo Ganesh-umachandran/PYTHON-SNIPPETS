@@ -1,0 +1,10 @@
+#Your code below
+n,f=int(input()),0
+for i in range(n+1):
+    a=i+(bin(i).count("1"))
+    if a==n:
+        print("NO")
+        f=1
+        break
+if f==0:
+    print("YES")
