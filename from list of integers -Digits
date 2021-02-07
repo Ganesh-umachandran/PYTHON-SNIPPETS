@@ -1,0 +1,11 @@
+#Your code below
+l=list(map(int,input().split()))
+l1="".join(list(map(str,input().split())))
+l2,c=[],0
+for i in l1:
+    if i not in l2:
+        l2.append(i)
+        if l[int(i)]>=l1.count(i):
+            c+=1
+print("YES" if c==len(l2) else "NO")
+        
