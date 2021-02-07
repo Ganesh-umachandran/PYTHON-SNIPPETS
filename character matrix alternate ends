@@ -1,0 +1,8 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    if i%2==0:
+        print(*list(map(str,input().split()))[:i+1],sep="")
+    else:
+        print(*list(map(str,input().split()))[-(i+1):],sep="")
