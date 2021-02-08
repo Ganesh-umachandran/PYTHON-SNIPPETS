@@ -1,0 +1,10 @@
+#Your code below
+s=list(input().strip())
+a=[]
+while(len(s)>0):
+    b=sorted(list(set(s)))
+    a+=b
+    for i in b:
+        s.pop(s.index(i))
+print("".join(a))
+    
