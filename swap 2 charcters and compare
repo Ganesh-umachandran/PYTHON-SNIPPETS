@@ -1,0 +1,11 @@
+#Your code below
+s1=list(input().strip())
+s2=list(input().strip())
+for i in range(len(s1)):
+    if s1[i]!=s2[i]:
+        break
+for j in range(len(s1)-1,-1,-1):
+    if s1[j]!=s2[j]:
+        break
+s1[i],s1[j]=s1[j],s1[i]
+print("YES" if s1==s2 else "NO")
