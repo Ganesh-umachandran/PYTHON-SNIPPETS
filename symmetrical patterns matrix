@@ -1,0 +1,17 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+x=[[0 for i in range(r)]for j in range(c)]
+for i in range(r):
+    for j in range(c):
+        x[j][i]=l[i][j]
+if all(x[i]==x[-(i+1)] for i in range(c//2)) and all(l[i]==l[-(i+1)] for i in range(c//2)):
+    print("Both")
+elif all(x[i]==x[-(i+1)] for i in range(c//2)):
+    print("Vertically Symmetric")
+elif all(l[i]==l[-(i+1)] for i in range(r//2)):
+    print("Horizontally Symmetric")
+else:
+    print(-1)
