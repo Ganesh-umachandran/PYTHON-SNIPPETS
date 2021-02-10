@@ -1,0 +1,7 @@
+#Your code below
+n=int(input())
+s=bin(n).count("1")
+for i in range(n+1,n+100001):
+    if bin(i).count("1")==s:
+        print(i)
+        break
