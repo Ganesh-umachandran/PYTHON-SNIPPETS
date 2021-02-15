@@ -1,0 +1,15 @@
+#Your code below
+n,l,a=int(input()),[],[]
+c=n
+for i in range((n*n)+1):
+    if len(a)==n:
+        l.append(a)
+        a=[]
+    a.append(c)
+    c+=n
+for i in range(n):
+    if i%2==0:
+        print(*l[i])
+    else:
+        print(*l[i][::-1])
+    
