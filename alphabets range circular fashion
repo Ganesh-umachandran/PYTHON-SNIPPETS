@@ -1,0 +1,9 @@
+#Your code below
+s=input().strip()
+for i in range(len(s)-1):
+    if ord(s[i+1])<ord(s[i]):
+        print(*[chr(i) for i in range(ord(s[i]),ord("z")+1)],sep="",end="")
+        print(*[chr(i) for i in range(ord("a"),ord(s[i+1])+1)],sep="",end="")
+    else:
+        print(*[chr(i) for i in range(ord(s[i]),ord(s[i+1])+1)],sep="",end="")
+            
