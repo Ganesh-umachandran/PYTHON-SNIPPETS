@@ -1,0 +1,7 @@
+#Your code below
+n,c=int(input()),""
+for i in range(n):
+    c=c+chr(65+i)+c
+    print(c)
+    
+    
