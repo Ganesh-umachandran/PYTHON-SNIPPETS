@@ -1,0 +1,11 @@
+#Your code below
+s=input().strip()
+n,c=int(input()),0
+for i in range(n):
+    a=input().strip()
+    if a==s:
+            c+=10+len(a)-1
+    elif len(a)<=len(s):
+        if all(a.count(j)<=s.count(j)  for j in a):
+            c+=len(a)-1
+print(c)
