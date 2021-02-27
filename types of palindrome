@@ -1,0 +1,22 @@
+#Your code below
+s,count,a,b=input().strip(),0,"",""
+if s==s[::-1]:
+    count+=1
+for i in s:
+    if i.isalpha():
+        a+=i
+for i in s: 
+    if i.isdigit():
+        b+=i
+if a==a[::-1] and len(a)>0:
+    count+=1
+if b==b[::-1] and len(b)>0:
+    count+=1
+if count==0:
+    print("No Palindrome")
+elif count==1:
+    print("Single Palindrome")
+elif count==2:
+    print("Double Palindrome")
+elif count==3:
+    print("Triple Palindrome")
