@@ -1,0 +1,39 @@
+#Your code below
+n,s=map(str,input().split())
+n=int(n)
+if s=="tl":
+    a=0
+    for i in range(n):
+        b=a
+        for j in range(n):
+            print(b,end=" ")
+            b+=1
+        print()
+        a+=1
+elif s=="tr":
+    a=n-1
+    for i in range(n):
+        b=a
+        for j in range(n):
+            print(b,end=" ")
+            b-=1
+        print()
+        a+=1
+elif s=="bl":
+    a=n-1
+    for i in range(n):
+        b=a
+        for j in range(n):
+            print(b,end=" ")
+            b+=1
+        print()
+        a-=1
+else:
+    a=(n-1)*2
+    for i in range(n):
+        b=a
+        for j in range(n):
+            print(b,end=" ")
+            b-=1
+        print()
+        a-=1
