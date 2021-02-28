@@ -1,0 +1,18 @@
+#Your code below
+n,flag=input().strip(),0
+for i in range(len(n)-1,-1,-1):
+    for j in range(10):
+        a=int(n[:i]+str(j)+n[i+1:])
+        if a>1:
+            for k in range(2,(a//2)+1):
+                if a%k==0:
+                    break
+            else:
+                print("NO")
+                flag=1
+                break
+    if flag==1:
+        break
+if flag==0:
+    print("YES")
+           
