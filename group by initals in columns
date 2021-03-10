@@ -1,0 +1,22 @@
+#Your code below
+l=list(map(str,input().split()))
+a,c,l1=[],0,[]
+for i in l:
+    if i[0] not in a:
+        a.append(i[0])
+for i in sorted(a):
+    b=[]
+    for j in l:
+        if j[0]==i:
+            b.append(j)
+    l1.append(b)
+for i in l1:
+    if len(i)>c:
+        c=len(i)
+for i in l1:
+    for j in range(c-len(i)):
+        i.append(len(l[0])*"*")
+for i in range(c):
+    for j in range(len(a)):
+        print(l1[j][i],end="")
+    print()
