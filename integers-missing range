@@ -1,0 +1,12 @@
+#Your code below
+n,flag=int(input()),0
+l=list(map(int,input().split()))
+if l[0]!=1:
+    print("1-",l[0]-1,sep="",end=" ")
+    flag=1
+for i in range(n-1):
+    if l[i+1]-l[i]>=2:
+        print(l[i]+1,"-",l[i+1]-1,sep="",end=" ")
+        flag=1
+if flag==0:
+    print(-1)
