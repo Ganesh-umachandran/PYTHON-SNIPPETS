@@ -1,0 +1,14 @@
+#Your code below
+r,c=map(int,input().split())
+string,integer_sum,l="",0,[]
+for i in range(r):
+    l.append(list(map(str,input().split())))
+for i in range(c):
+    for j in range(r):
+        if l[j][i].isdigit():
+            integer_sum+=int(l[j][i])
+        else:
+            string+=l[j][i]
+print(integer_sum,string,sep="\n")
+    
+        
