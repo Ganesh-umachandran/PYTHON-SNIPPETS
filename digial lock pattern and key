@@ -1,0 +1,15 @@
+#Your code below
+l,s1=[],""
+for i in range(4):
+    l.append(list(input().strip()))
+s=input().strip()
+for i in range(len(l[0])):
+    a=""
+    for j in range(4):
+        a+=l[j][i]
+    s1+=str(int(a,2))
+  
+if s==s1:
+    print("YES")
+else:
+    print("NO")
