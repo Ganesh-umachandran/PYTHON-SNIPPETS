@@ -1,0 +1,10 @@
+#Your code below
+n=int(input())
+l,count=[],0
+for i in range(n):
+    l.append(list(map(int,input().split())))
+a,b,c,d=map(int,input().split())
+for i in range(n):
+    if l[i][0]>=a and l[i][0]<=c and l[i][1]>=d and l[i][1]<=b:
+        count+=1
+print(count)
