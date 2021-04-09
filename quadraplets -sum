@@ -1,0 +1,14 @@
+a,b,c,d=map(int,input().split())
+p=list(map(int,input().split()))
+q=list(map(int,input().split()))
+r=list(map(int,input().split()))
+s=list(map(int,input().split()))
+count=0
+for i in p:
+    for j in q:
+        for k in r:
+            for l in s:
+                if (i+j==k+l) or(i+k==j+l) or(i+l==j+k):
+                    count+=1
+print(count)
+                
